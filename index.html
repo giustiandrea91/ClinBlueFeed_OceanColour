@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OLCI RGB Viewer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            text-align: center;
+        }
+        input[type=range] {
+            width: 300px;
+            margin-bottom: 10px;
+        }
+        #dateLabel {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+        iframe {
+            width: 100%;
+            height: 80vh;
+            border: 1px solid #ccc;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>OLCI Enhanced RGB Viewer</h1>
+
+    <div id="dateLabel">20240517</div>
+
+    <input
+        type="range"
+        id="slider"
+        min="0"
+        max="1"
+        value="0"
+        oninput="updatePlot(this.value)"
+    >
+
+    <iframe
+        id="plotFrame"
+        src="20240517/20240517_rgb.html"
+        frameborder="0"
+    ></iframe>
+
+    <script>
+        const dates = ['20240517', '20240522'];
+        const slider = document.getElementById('slider');
+        const dateLabel = document.getElementById('dateLabel');
+        const iframe = document.getElementById('plotFrame');
+
+        function updatePlot(index) {
+            const date = dates[index];
+            dateLabel.textContent = date;
+            iframe.src = date + '/' + date + '_rgb.html';
+        }
+    </script>
+</body>
+</html>
