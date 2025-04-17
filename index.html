@@ -83,7 +83,7 @@
     </div>
     <div class="control-section">
         <div id="dateLabel">2025-04-13</div>
-        <input type="range" id="slider" min="0" max="2" value="0" oninput="updatePlot(this.value)">
+        <input type="range" id="slider" min="0" max="3" value="0" oninput="updatePlot(this.value)">
         <button class="btn active" onclick="setProduct('rgb')">RGB Enhanced</button>
         <button class="btn" onclick="setProduct('chl')">Chlorophyll-A</button>
         <button class="btn" onclick="setProduct('rrs660')">Red Reflectance</button>
@@ -102,8 +102,8 @@
 </footer>
 
 <script>
-    const dates = ['20250413', '20250414', '20250415'];
-    const formattedDates = ['2025-04-13', '2025-04-14', '2025-04-15'];
+    const dates = ['20250413', '20250414', '20250415', '20250416'];
+    const formattedDates = ['2025-04-13', '2025-04-14', '2025-04-15', '2025-04-16'];
     const slider = document.getElementById('slider');
     const dateLabel = document.getElementById('dateLabel');
     const iframe = document.getElementById('plotFrame');
