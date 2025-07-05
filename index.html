@@ -93,8 +93,8 @@
         <div class="logo-title"> Multi-Satellite Ocean Color Visualization Dashboard</div>
     </div>
     <div class="control-section">
-        <div id="dateLabel">2025-07-03</div>
-        <input type="range" id="slider" min="0" max="6" value="6" list="tickmarks" oninput="updatePlot(this.value)">
+        <div id="dateLabel">2025-07-04</div>
+        <input type="range" id="slider" min="0" max="7" value="7" list="tickmarks" oninput="updatePlot(this.value)">
         <datalist id="tickmarks">
         <option value="0" label="2025-06-27"></option>
 <option value="1"></option>
@@ -102,7 +102,8 @@
 <option value="3"></option>
 <option value="4"></option>
 <option value="5"></option>
-<option value="6" label="2025-07-03"></option>
+<option value="6"></option>
+<option value="7" label="2025-07-04"></option>
         </datalist>
         <button class="btn active" onclick="setProduct('rgb')">RGB Enhanced</button>
         <button class="btn" onclick="setProduct('chl')">Chlorophyll-A</button>
@@ -110,7 +111,7 @@
     </div>
 </header>
 
-<iframe id="plotFrame" src="20250703/20250703_rgb_allsats.html"></iframe>
+<iframe id="plotFrame" src="20250704/20250704_rgb_allsats.html"></iframe>
 
 <!-- New image block -->
 <div id="imageContainer">
@@ -123,8 +124,8 @@
 </footer>
 
 <script>
-    const dates = ['20250627', '20250628', '20250629', '20250630', '20250701', '20250702', '20250703'];
-    const formattedDates = ['2025-06-27', '2025-06-28', '2025-06-29', '2025-06-30', '2025-07-01', '2025-07-02', '2025-07-03'];
+    const dates = ['20250627', '20250628', '20250629', '20250630', '20250701', '20250702', '20250703', '20250704'];
+    const formattedDates = ['2025-06-27', '2025-06-28', '2025-06-29', '2025-06-30', '2025-07-01', '2025-07-02', '2025-07-03', '2025-07-04'];
     const slider = document.getElementById('slider');
     const dateLabel = document.getElementById('dateLabel');
     const iframe = document.getElementById('plotFrame');
